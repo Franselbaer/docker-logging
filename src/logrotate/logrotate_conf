@@ -1,0 +1,9 @@
+/data/* {
+    daily
+    rotate 31
+    missingok
+    compress
+    delaycompress
+    notifempty
+    copytruncate
+}

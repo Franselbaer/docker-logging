@@ -1,0 +1,18 @@
+version: '2.1'
+services:
+  rsyslog:
+    hostname: rsyslogserver
+    build: src/rsyslog
+    ports:
+    - "514:514"
+    - "514:514/udp"
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ./containerdata/syslog:/data
+  logrotate:
+    hostname: logrotater
+    build: src/logrotate
+    volumes_from:
+    - rsyslog
+    depends_on:
+    - rsyslog
