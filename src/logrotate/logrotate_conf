@@ -1,4 +1,4 @@
-/data/* {
+/data/**/*.log {
     daily
     rotate 31
     missingok
