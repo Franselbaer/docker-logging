@@ -1,6 +1,6 @@
 #!/bin/bash
 while [ TRUE ]; do
   echo "Starting logrotate at $(date)"
-  /usr/sbin/logrotate /etc/logrotate.conf
+  /usr/sbin/logrotate -v /etc/logrotate.conf
   sleep 3600
 done
